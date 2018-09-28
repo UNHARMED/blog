@@ -19,7 +19,8 @@
 
 
   <?php
-  $bdd = new PDO('mysql:host=localhost;dbname=blog;charset=utf8', 'root', 'root');
+
+require('login.php');
 
   $billets = $bdd->query('SELECT * FROM billets');
   while ($donnees = $billets->fetch())
